@@ -5,27 +5,26 @@
     <div class="display">
       {{ current || 0 }}
     </div>
-    <div class="btn">C</div>
-    <div class="btn">0</div>
-    <div class="btn">+/-</div>
-    <div class="btn">%</div>
-    <div class="btn">/</div>
-    <div class="btn">7</div>
-    <div class="btn">8</div>
-    <div class="btn">9</div>
-    <div class="btn">*</div>
-    <div class="btn">4</div>
-    <div class="btn">5</div>
-    <div class="btn">6</div>
-    <div class="btn">-</div>
-    <div class="btn">1</div>
-    <div class="btn">2</div>
-    <div class="btn">3</div>
-    <div class="btn">+</div>
-    <div class="btn">0</div>
-    <div class="btn">.</div>
-    <div class="btn">=</div>
-    <div class="btn"></div>
+    <div @click="clear" class="btn">C</div>
+    <div @click="" class="btn-operator">+/-</div>
+    <div @click="" class="btn-operator">%</div>
+    <div @click="" class="btn-operator">/</div>
+    <div @click="" class="btn">7</div>
+    <div @click="" class="btn">8</div>
+    <div @click="" class="btn">9</div>
+    <div @click="" class="btn-operator">*</div>
+    <div @click="" class="btn">4</div>
+    <div @click="" class="btn">5</div>
+    <div @click="" class="btn">6</div>
+    <div @click="" class="btn-operator">-</div>
+    <div @click="" class="btn">1</div>
+    <div @click="" class="btn">2</div>
+    <div @click="" class="btn">3</div>
+    <div @click="" class="btn-operator">+</div>
+    <div @click="" class="btn-zero">0</div>
+    <div @click="" class="btn">.</div>
+    <div @click="" class="btn-operator">=</div>
+    <div @click="" class="btn">history</div>
   </div>
 </template>
 
@@ -51,4 +50,14 @@ export default {
   background-color: #333;
   color: white;
 }
+
+.btn {
+  background-color: #f2f2f2;
+  border: 1px solid #999;
+}
+
+.btn-zero {
+  grid-column: 1 / 3;
+}
+
 </style>
